@@ -84,15 +84,6 @@
             android:text="@string/checkout"
             android:textSize="18sp" />
 
-        <!--dummy button for pre-loading PP resources-->
-        <com.paypal.checkout.paymentbutton.PayPalButton
-
-            android:id="@+id/payPalButtonPreLoad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-        </com.paypal.checkout.paymentbutton.PayPalButton>
     </androidx.cardview.widget.CardView>
 
 

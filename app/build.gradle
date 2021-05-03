@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+
     compileSdkVersion 29
 
     defaultConfig {
@@ -36,6 +37,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
 }
 
 dependencies {

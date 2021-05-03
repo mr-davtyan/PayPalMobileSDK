@@ -7,19 +7,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.paypal.checkout.PayPalCheckout
-import com.paypal.checkout.config.CheckoutConfig
-import com.paypal.checkout.config.Environment
-import com.paypal.checkout.config.SettingsConfig
-import com.paypal.checkout.createorder.CreateOrder
-import com.paypal.checkout.createorder.CurrencyCode
-import com.paypal.checkout.createorder.OrderIntent
-import com.paypal.checkout.createorder.UserAction
-import com.paypal.checkout.order.Amount
-import com.paypal.checkout.order.AppContext
-import com.paypal.checkout.order.Order
-import com.paypal.checkout.order.PurchaseUnit
-import com.paypal.checkout.paymentbutton.PayPalButton
 import net.davtyan.paypalmobilesdk.databinding.ActivityMainBinding
 import net.davtyan.paypalmobilesdk.items.Cart
 import net.davtyan.paypalmobilesdk.items.ItemAdapter
@@ -46,9 +33,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         cartInfoText = findViewById(R.id.cartText)
-
-        //  pre-loading PP resources. not necessary, but speeds up rendering the PP button on checkout
-        payPalPreLoad(payPalButton = findViewById(R.id.payPalButtonPreLoad))    //  the button is also invisible
 
         checkoutButton = findViewById(R.id.buttonCheckout)
         checkoutButton.setOnClickListener {
@@ -120,42 +104,6 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
         }
-    }
-
-
-    //  pre-loading PP resources. not necessary, but speeds up rendering the PP button on checkout
-    private fun payPalPreLoad(payPalButton: PayPalButton) {
-        val config = CheckoutConfig(
-            application = application,
-            clientId = BuildConfig.PP_CLIENT_ID,  //ID from secrets.properties
-            environment = Environment.SANDBOX,
-            returnUrl = "${applicationContext.packageName}://paypalpay",  //return URL. Use the same in PP SDK console
-            currencyCode = CurrencyCode.USD,
-            userAction = UserAction.PAY_NOW,
-            settingsConfig = SettingsConfig(
-                loggingEnabled = true
-            )
-        )
-        PayPalCheckout.setConfig(config)
-        payPalButton.setup(
-            createOrder = CreateOrder { createOrderActions ->
-                val order = Order(
-                    intent = OrderIntent.CAPTURE,
-                    appContext = AppContext(
-                        userAction = UserAction.PAY_NOW
-                    ),
-                    purchaseUnitList = listOf(
-                        PurchaseUnit(
-                            amount = Amount(
-                                currencyCode = CurrencyCode.USD,
-                                value = "0"
-                            )
-                        )
-                    )
-                )
-                createOrderActions.create(order)
-            }
-        )
     }
 
 
