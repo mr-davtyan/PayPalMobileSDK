@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="drawer_icons">
+        <item>@drawable/cake</item>
+        <item>@drawable/croissant</item>
+        <item>@drawable/cupcake</item>
+        <item>@drawable/cupcake_with_a_berry</item>
+        <item>@drawable/doughnut</item>
+        <item>@drawable/fish_food</item>
+        <item>@drawable/french_fries</item>
+        <item>@drawable/hot_dog</item>
+        <item>@drawable/pizza</item>
+        <item>@drawable/popcorn</item>
+        <item>@drawable/sausage</item>
+        <item>@drawable/taco</item>
+        <item>@drawable/vegetarian_food</item>
+        <item>@drawable/berry_jam</item>
+        <item>@drawable/chocolate_bar</item>
+        <item>@drawable/food_and_wine</item>
+        <item>@drawable/hamburger</item>
+        <item>@drawable/ice_cream_cone</item>
+        <item>@drawable/ice_cream_sundae</item>
+        <item>@drawable/juice_bottle</item>
+        <item>@drawable/lemonade</item>
+        <item>@drawable/noodles</item>
+    </integer-array>
+</resources>

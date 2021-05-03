@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PayPalMobileSDK</string>
+    <string name="title_activity_main">PayPal Mobile SDK Test</string>
+    <string name="checkout">Checkout</string>
+    <string name="add_to_cart">AddToCart</string>
+    <string name="item_image">item image</string>
+    <string name="clearCart">clear cart</string>
+    <string name="title_activity_checkout"> </string>
+    <string name="button_continue_shopping">Continue Shopping</string>
+    <string name="shopping_cart_details">Shopping Cart Details</string>
+    <string name="text_items">items</string>
+    <string name="text_price">price</string>
+    <string name="text_usd">$</string>
+    <string name="activity_result">ActivityResult</string>
+    <string name="activity_result_success">Success</string>
+    <string name="message_order_cancelled">Order has been Canceled</string>
+    <string name="cart_is_empty">Cart is empty</string>
+    <string name="button_close">Close</string>
+    <string name="error_message">errorMessage</string>
+    <string name="transaction_cancelled_title">Transaction canceled\nSee below for details</string>
+
+</resources>
