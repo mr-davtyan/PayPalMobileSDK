@@ -11,7 +11,10 @@ Simple implementation of the PayPal Mobile SDK for Android made on Kotlin.
 - Uses official PayPal Mobile SDK implementation process
 - Handles errors during the checkout process
 
+
+## Video of the checkout process
 [![Video of PayPal Mobile SDK implementation](https://img.youtube.com/vi/OeyC-k_BBCc/1.jpg)](https://www.youtube.com/watch?v=OeyC-k_BBCc)
+
 
 ## Notice
 
