@@ -39,7 +39,7 @@ build/
 *.ipr
 *.iws
 .idea/
-
+/secrets.properties
 /app/release/
 /app/debug/
 /.keys/
